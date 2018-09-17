@@ -9,7 +9,7 @@ count=$2
 printf "%s\n" "${car}"
 printf "%s\n" "${count}"
 
-if [ $count -eq 2 ]; then
+if [ $count -eq 1 ]; then
     python3 join_otaa_retry.py
     sleep 10
 fi
