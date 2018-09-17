@@ -92,6 +92,7 @@ class LoRaWANotaa(LoRa):
                         print("Over retry limit!!")
                         sys.exit()
                     else:
+                        sleep(5)
                         lora.join()
             sleep(1)
 
@@ -119,6 +120,7 @@ lora = LoRaWANotaa(False)
 parser.parse_args(lora)
 lora.set_mode(MODE.SLEEP)
 lora.set_dio_mapping([1,0,0,0,0,0])
+lora.set_freq(923.2)
 lora.set_pa_config(pa_select=1)
 lora.set_pa_config(max_power=0x0F, output_power=0x0E)
 lora.set_invert_iq(0)
