@@ -26,6 +26,7 @@ class LoRaWANotaa(LoRa):
         lorawan.read(payload)
         lorawan.get_payload()
         self.write_config()
+        self.write_log()
         sys.exit(0)
 
     def show(self, a) :
@@ -35,9 +36,6 @@ class LoRaWANotaa(LoRa):
         self.clear_irq_flags(TxDone=1)
         print("TxDone")
         self.set_mode(MODE.STDBY)
-        self.set_freq(923.2)
-        self.set_bw(7)
-        self.set_spreading_factor(7)
         self.set_dio_mapping([0,0,0,0,0,0])
         self.set_invert_iq(1)
         self.reset_ptr_rx()
@@ -47,9 +45,10 @@ class LoRaWANotaa(LoRa):
 
 
     def send(self):
+        global PARKING_NUMBER
         lorawan = LoRaWAN.new(nwskey, appskey)
-        parking_number = str(self.get_parking_number())
-        lorawan.create(MHDR.CONF_DATA_UP, {'devaddr': devaddr, 'fcnt': fCnt, 'data': list(map(ord, parking_number)) })
+        PARKING_NUMBER = str(self.get_parking_number())
+        lorawan.create(MHDR.CONF_DATA_UP, {'devaddr': devaddr, 'fcnt': fCnt, 'data': list(map(ord, PARKING_NUMBER)) })
         self.set_dio_mapping([1,0,0,0,0,0])
         self.set_invert_iq(0)
         self.write_payload(lorawan.to_raw())
@@ -75,7 +74,17 @@ class LoRaWANotaa(LoRa):
         data = json.dumps(config)
         fp = open("config.json","w")
         fp.write(data)
-        fp.close()   
+        fp.close()
+
+    def write_log(self):
+        log = "[SEND] " + time.strftime("%Y-%m-%d %H:%M:%S",time.localtime())
+        if RXDONE == True :
+            log += " Send Success , Parking number : " + PARKING_NUMBER + "\n"
+        else:
+            log += " Send Failure , Retry " + str(RETRY)  + " time \n"
+        fp = open("lora.log","a")
+        fp.write(log)
+        fp.close()
 
     def start(self):
         self.read_config()
@@ -87,8 +96,9 @@ class LoRaWANotaa(LoRa):
                 t.join()
                 if RXDONE == False:
                     global RETRY
+                    lora.write_log()
                     RETRY = RETRY + 1
-                    if RETRY > MAX_RETRY:
+                    if RETRY >= MAX_RETRY:
                         print("Over retry limit!!")
                         sys.exit()
                     else:
@@ -101,13 +111,14 @@ def detector():
         if RXDONE == True:
             break
         time.sleep(1)
-        
+ 
 
 # Init
-MAX_RETRY = 1
+MAX_RETRY = 3
 RETRY = 0
 RXDONE = False
 TIMER_START = False
+CAR = 0
 
 devaddr = []
 nwskey = []
@@ -120,9 +131,9 @@ lora = LoRaWANotaa(False)
 parser.parse_args(lora)
 lora.set_mode(MODE.SLEEP)
 lora.set_dio_mapping([1,0,0,0,0,0])
-lora.set_freq(923.2)
-lora.set_bw(7)
-lora.set_spreading_factor(7)
+#lora.set_freq(923.2)
+#lora.set_bw(7)
+#lora.set_spreading_factor(7)
 lora.set_pa_config(pa_select=1)
 lora.set_pa_config(max_power=0x0F, output_power=0x0E)
 lora.set_invert_iq(0)
