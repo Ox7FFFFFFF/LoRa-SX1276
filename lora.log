@@ -1,0 +1,12 @@
+[SEND] 2018-09-17 14:48:46 Send Failure 0 time 
+[SEND] 2018-09-17 14:48:52 Send Failure 1 time 
+[SEND] 2018-09-17 14:48:58 Send Failure 2 time 
+[SEND] 2018-09-17 14:49:23 Send Success , Parking number : 12
+[JOIN] 2018-09-17 15:01:02 Join Success
+[JOIN] 2018-09-17 15:09:58 Join Success
+[SEND] 2018-09-17 15:10:11 Send Success , Parking number : 10
+[SEND] 2018-09-17 15:16:00 Send Success , Parking number : 5
+[SEND] 2018-09-17 15:19:37 Send Success , Parking number : 5
+[SEND] 2018-09-17 15:20:23 Send Success , Parking number : 5
+[JOIN] 2018-09-17 15:21:08 Join Success
+[SEND] 2018-09-17 15:21:21 Send Success , Parking number : 5
