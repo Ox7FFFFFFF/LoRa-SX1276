@@ -31,15 +31,15 @@ class LoRaWANotaa(LoRa):
             devaddr = lorawan.get_devaddr()
             nwskey = lorawan.derive_nwskey(devnonce)
             appskey = lorawan.derive_appskey(devnonce)
-            self.show(devaddr)
-            self.show(nwskey)
-            self.show(appskey)
+            self.show("DevAddr : ",devaddr)
+            self.show("Network Session Key : ",nwskey)
+            self.show("Application Session Key : ",appskey)
             self.write_config(devaddr,nwskey,appskey)
             self.write_log()
             sys.exit(0)
 
-    def show(self, a) :
-        print(','.join('0x'+format(x, '02x') for x in a))
+    def show(self,s,a) :
+        print(s + (','.join('0x'+format(x, '02x') for x in a)))
 
     def write_config(self,devaddr,nwskey,appskey):
         tx_counter = 0
