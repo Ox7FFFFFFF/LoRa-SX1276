@@ -1,12 +1,114 @@
-[SEND] 2018-09-17 14:48:46 Send Failure 0 time 
-[SEND] 2018-09-17 14:48:52 Send Failure 1 time 
-[SEND] 2018-09-17 14:48:58 Send Failure 2 time 
-[SEND] 2018-09-17 14:49:23 Send Success , Parking number : 12
-[JOIN] 2018-09-17 15:01:02 Join Success
-[JOIN] 2018-09-17 15:09:58 Join Success
-[SEND] 2018-09-17 15:10:11 Send Success , Parking number : 10
-[SEND] 2018-09-17 15:16:00 Send Success , Parking number : 5
-[SEND] 2018-09-17 15:19:37 Send Success , Parking number : 5
-[SEND] 2018-09-17 15:20:23 Send Success , Parking number : 5
-[JOIN] 2018-09-17 15:21:08 Join Success
-[SEND] 2018-09-17 15:21:21 Send Success , Parking number : 5
+[JOIN] 2018-09-18 10:42:58 Join Success
+[SEND] 2018-09-18 10:43:03 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:43:10 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:43:17 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:43:29 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:43:30 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:43:37 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:43:44 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:43:56 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:43:57 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:44:04 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:44:11 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:44:18 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:44:25 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:44:32 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:44:39 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:44:46 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:44:53 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:45:00 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:45:07 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:45:15 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:45:22 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:45:29 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:45:36 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:45:48 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:45:49 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:45:56 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:46:03 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:46:15 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:46:16 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:46:23 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:46:30 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:46:37 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:46:44 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:46:51 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:46:58 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:47:10 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:47:11 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:47:23 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:47:24 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:47:31 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:47:38 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:47:45 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:47:52 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:47:59 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:48:06 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:48:18 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:48:19 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:48:31 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:48:32 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:48:39 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:48:46 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:48:53 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:49:01 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:49:08 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:49:15 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:49:22 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:49:29 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:49:36 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:49:43 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:49:50 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:49:57 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:50:04 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:50:16 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:50:17 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:50:24 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:50:31 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:50:38 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:50:45 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:50:57 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:50:58 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:51:05 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:51:17 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:51:18 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:51:25 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:51:32 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:51:39 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:51:46 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:51:58 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:51:59 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:52:06 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:52:13 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:52:20 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:52:27 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:52:34 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:52:42 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:52:49 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:52:56 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:53:03 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:53:10 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:53:17 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:53:24 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:53:31 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:53:38 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:53:45 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:53:52 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:53:59 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:54:06 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:54:13 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:54:20 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:54:27 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:54:34 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:54:46 Send Failure , Retry 0 time 
+[SEND] 2018-09-18 10:54:47 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:54:54 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:55:01 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:55:08 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:55:15 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:55:22 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:55:29 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:55:36 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:55:43 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:55:50 Send Success , Parking number : 55
+[SEND] 2018-09-18 10:55:57 Send Success , Parking number : 55
