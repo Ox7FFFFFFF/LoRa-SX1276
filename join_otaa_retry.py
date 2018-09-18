@@ -4,7 +4,7 @@ from time import sleep
 from SX127x.LoRa import *
 from SX127x.LoRaArgumentParser import LoRaArgumentParser
 from SX127x.board_config import BOARD
-import LoRaWAN,json,time,threading
+import LoRaWAN,json,time
 from LoRaWAN.MHDR import MHDR
 from random import randrange
 
@@ -42,8 +42,7 @@ class LoRaWANotaa(LoRa):
         print(s + (','.join('0x'+format(x, '02x') for x in a)))
 
     def write_config(self,devaddr,nwskey,appskey):
-        tx_counter = 0
-        config = {'devaddr':devaddr,'nwskey':nwskey,'appskey':appskey,'fCnt':tx_counter}
+        config = {'devaddr':devaddr,'nwskey':nwskey,'appskey':appskey,'fCnt':0}
         data = json.dumps(config)
         fp = open("config.json","w")
         fp.write(data)
@@ -81,9 +80,7 @@ class LoRaWANotaa(LoRa):
         self.join()
         while True:
             if TIMER_START == True:
-                t = threading.Thread(target = detector)
-                t.start()
-                t.join()
+                detector()
                 if RXDONE == False:
                     global RETRY
                     lora.write_log()

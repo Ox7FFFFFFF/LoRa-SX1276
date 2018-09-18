@@ -4,7 +4,7 @@ from SX127x.LoRa import *
 from SX127x.LoRaArgumentParser import LoRaArgumentParser
 from SX127x.board_config import BOARD
 from time import sleep
-import LoRaWAN,json,time,threading
+import LoRaWAN,json,time
 from LoRaWAN.MHDR import MHDR
 from random import randrange
 
@@ -25,7 +25,6 @@ class LoRaWANotaa(LoRa):
         lorawan = LoRaWAN.new(nwskey, appskey)
         lorawan.read(payload)
         lorawan.get_payload()
-        self.write_config()
         self.write_log()
         sys.exit(0)
 
@@ -45,10 +44,12 @@ class LoRaWANotaa(LoRa):
 
 
     def send(self):
-        global PARKING_NUMBER
+        global PARKING_NUMBER,fCnt
+        fCnt = fCnt + 1
         lorawan = LoRaWAN.new(nwskey, appskey)
         PARKING_NUMBER = str(self.get_parking_number())
         lorawan.create(MHDR.CONF_DATA_UP, {'devaddr': devaddr, 'fcnt': fCnt, 'data': list(map(ord, PARKING_NUMBER)) })
+        self.write_config()
         self.set_dio_mapping([1,0,0,0,0,0])
         self.set_invert_iq(0)
         self.write_payload(lorawan.to_raw())
@@ -68,8 +69,6 @@ class LoRaWANotaa(LoRa):
         fCnt = parsed_json['fCnt']
 
     def write_config(self):
-        global fCnt
-        fCnt = fCnt + 1
         config = {'devaddr':devaddr,'nwskey':nwskey,'appskey':appskey,'fCnt':fCnt}
         data = json.dumps(config)
         fp = open("config.json","w")
@@ -91,9 +90,7 @@ class LoRaWANotaa(LoRa):
         self.send()
         while True:
             if TIMER_START == True:
-                t = threading.Thread(target = detector)
-                t.start()
-                t.join()
+                detector()
                 if RXDONE == False:
                     global RETRY
                     lora.write_log()
